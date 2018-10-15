@@ -22,7 +22,7 @@ func main() {
 	// Setting a time so we can calculate Duration
 	start := time.Now()
 
-	// dont forget to parse you flags
+	// dont forget to parse your flags
 	flag.Parse()
 
 	// make a channel to safely communicate with our workders
@@ -51,7 +51,7 @@ func main() {
 	}
 
 	// waits for all our workers to finish
-	wg.Wait()
+	//wg.Wait()
 	f := time.Since(start)
 	log.Printf("Workload Count:%v Goroutine Count:%v Duration:%v", *workers, *testcount, f)
 }

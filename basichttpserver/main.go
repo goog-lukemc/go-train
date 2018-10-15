@@ -24,12 +24,15 @@ func main() {
 	go checkhttp()
 
 	// A single line in the http package starts an http server.
+
+	// If we wanted we could listen on 2 or more ports at the same time.
+	//go http.ListenAndServe(":8081", nil)
 	http.ListenAndServe(":8080", nil)
 }
 
 // This function handles out http request for the json file
 func asciiHandler(w http.ResponseWriter, r *http.Request) {
-	// Lets get the string  at the end of the URL
+	// Lets get the string   at the end of the URL
 	scount := path.Clean(path.Base(r.URL.Path))
 
 	// Try to convert it to and int

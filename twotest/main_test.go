@@ -16,7 +16,7 @@ func TestSum(t *testing.T) {
 	for _, test := range tests {
 		base := GetPathBase(test.url)
 		if base != test.result {
-			t.Errorf("Nope - Check out the path package!, got: %d, want: %d.", test.x, test.y, test, test.n)
+			t.Errorf("Nope - Check out the path package!, got: %v, want: %v.", base.url, base.result)
 		}
 	}
 }
