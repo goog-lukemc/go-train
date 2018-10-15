@@ -10,7 +10,7 @@ import (
 )
 
 // These are the  urls
-var urls = []string{"http://www.google.com", "http://www.walmart.com", "http://www.iamfake12345.com/"}
+var urls = []string{"http://www.google.com", "http://www.walmart.com", "http://fake12wxxxyh.us/"}
 
 func main() {
 	// Setup out logger

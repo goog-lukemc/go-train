@@ -55,6 +55,7 @@ func main() {
 	// How long does it take to get an item from a map[
 	start := time.Now()
 	log.Println(mymap[2])
-	log.Printf("Op Took %v", time.Since(start))
+	lat := time.Since(start)
+	log.Printf("Op Took %v", lat)
 
 }

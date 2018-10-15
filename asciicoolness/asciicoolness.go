@@ -9,7 +9,7 @@ type asciiresult struct {
 	ASCIICharter string
 }
 
-// a parent type to wrap out result type and pro a container reciever to our function
+// a parent type to encapsulate the result type and provide a container reciever to our function
 type ASCIICoolness struct {
 	NumbersList []int
 	ASCIIResult []asciiresult // Notice this slice is the container of our results

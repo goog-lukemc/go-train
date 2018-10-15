@@ -20,7 +20,7 @@ func main() {
 	})
 
 	// A little golang worker here to help us know what the Http
-	// server is ready.  It serves not purpose other than notification
+	// server is ready.  It serves no other purpose other than notification
 	go checkhttp()
 
 	// A single line in the http package starts an http server.
@@ -30,9 +30,9 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-// This function handles out http request for the json file
+// This function handles http request for the json file
 func asciiHandler(w http.ResponseWriter, r *http.Request) {
-	// Lets get the string   at the end of the URL
+	// Lets get the string at the end of the URL
 	scount := path.Clean(path.Base(r.URL.Path))
 
 	// Try to convert it to and int
