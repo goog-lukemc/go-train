@@ -1,7 +1,7 @@
 package main
 
 import (
-	"asciicoolness"
+	"go-train/asciicoolness"
 	"log"
 	"net/http"
 	"path"
@@ -25,8 +25,12 @@ func main() {
 
 	// A single line in the http package starts an http server.
 
+	// Set a delay timer so we can see the http server check
+	time.Sleep(time.Second * 3)
+
 	// If we wanted we could listen on 2 or more ports at the same time.
-	//go http.ListenAndServe(":8081", nil)
+	// go http.ListenAndServe(":8081", nil)
+
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -63,6 +67,7 @@ func asciiHandler(w http.ResponseWriter, r *http.Request) {
 	return
 }
 
+// Check our HTTP server to see if it up
 func checkhttp() {
 	for i := 0; i < 10; i++ {
 		resp, err := http.Get("http://localhost:8080/")

@@ -3,13 +3,13 @@ package asciicoolness
 import "encoding/json"
 
 // A custom type to collect our results
-// remember that anything with a captol letter will be exported.
+// remember that anything with a capital letter will be exported.
 type asciiresult struct {
 	ASCIINumber  int
 	ASCIICharter string
 }
 
-// a parent type to encapsulate the result type and provide a container reciever to our function
+// a parent type to encapsulate the result type and provide a container receiver to our function
 type ASCIICoolness struct {
 	NumbersList []int
 	ASCIIResult []asciiresult // Notice this slice is the container of our results

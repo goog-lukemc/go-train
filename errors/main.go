@@ -27,7 +27,7 @@ func main() {
 		if err != nil {
 			log.Printf("Url %s returns error:%s", v, err.Error())
 			panic(err)
-			// contine
+			// continue
 		}
 
 		// Check our webserver response status
