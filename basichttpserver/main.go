@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-train/asciicoolness"
+	"github.com/goog-lukemc/go-train/asciicoolness"
 	"log"
 	"net/http"
 	"path"
