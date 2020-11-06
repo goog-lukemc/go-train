@@ -43,7 +43,7 @@ func main() {
 		// Defer statements are really go routines that run after the function returns
 		defer resp.Body.Close()
 
-		// Normally would not discard and potential error
+		// Normally would not discard a potential error
 		u, _ := url.Parse(v)
 
 		// Dynamically create a file name to write to
