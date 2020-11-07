@@ -3,11 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
 	"strings"
 )
 
-// This is a struct - This customer type
+// This is a struct declaration
 type message struct {
 	text *string
 }
@@ -28,5 +27,13 @@ func main() {
 	flag.Parse()
 
 	// Print it to the screen
-	fmt.Fprintf(os.Stdout, "Hello %s!\n", msg.UpperCaseIt())
+	fmt.Printf("Hello %s!\n", msg.UpperCaseIt())
 }
+
+// Pointers in go, what are they and how do we use them?
+// What is the difference between a function and a method in Go and
+// why would you choose one over the other?
+
+// Exercise 5 Minutes:
+// Using the string package documentation at pkg.go.dev change the
+// above code to lowercase the variable output.

@@ -38,7 +38,7 @@ func main() {
 
 	// View a reference to specific items
 	frac := slc[9:11]
-	fmt.Println(frac)
+	fmt.Printf("Slice Fraction:%v\n", frac)
 
 	// Maps
 	// Notice the map order is random
@@ -49,7 +49,7 @@ func main() {
 
 	// Lets run range over our map to get the values
 	for k, v := range mymap {
-		log.Printf("ASCII Number:%v ASCII Charter:%v", k, v)
+		log.Printf("Unicode Number:%v Unicode Charter:%v", k, v)
 	}
 
 	// How long does it take to get an item from a map[
@@ -57,5 +57,7 @@ func main() {
 	log.Println(mymap[2])
 	lat := time.Since(start)
 	log.Printf("Op Took %v", lat)
+
+	// Bonus - Write code to print out the map above in int sorted order.
 
 }
