@@ -40,10 +40,9 @@ func main() {
 			log.Printf("Response Body is Nil for url:%v", v)
 		}
 
-		// Defer statements are really go routines that run after the function returns
+		// Defer statements push to the stack ans scheduled to execute after the function completes.
 		defer resp.Body.Close()
 
-		// Normally would not discard a potential error
 		u, _ := url.Parse(v)
 
 		// Dynamically create a file name to write to
@@ -69,3 +68,10 @@ func main() {
 	}
 
 }
+
+// Exercise: 5 Minutes
+// There are 1 or more common go programming mistakes in that code that is not already commented on.
+// Can you find them?
+
+// In more complex functions with many defer statements,
+// it is important to note that defers are schedeled in last in first out order.

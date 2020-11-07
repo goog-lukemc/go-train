@@ -1,4 +1,4 @@
-package asciicoolness
+package gotrain
 
 import "encoding/json"
 
@@ -16,7 +16,7 @@ type ASCIICoolness struct {
 	Length      int           //  we can populate this however we like
 }
 
-// A method on our type that populates our results with ascii information
+// A method on our type that populates our results with charter information
 func (m *ASCIICoolness) populate() {
 	for i := 0; i < m.Length; i++ {
 		resultitem := asciiresult{ASCIINumber: i, ASCIICharter: string(i)}
